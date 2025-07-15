@@ -127,7 +127,7 @@ nav a:focus:after {
   align-items: center;
 }
 .hero-title {
-  font-size: 5vw;        /* Scales with viewport width for a large, responsive effect */
+  font-size: 2.7rem;
   font-weight: 700;
   color: #fff;
   letter-spacing: -1.2px;
@@ -137,10 +137,6 @@ nav a:focus:after {
   animation: fadeInDown 1.1s cubic-bezier(.44,1.35,.33,1);
   margin: 0;
   text-shadow: 0 10px 32px #0cc0df33;
-  padding: 0 5vw;        /* Adds horizontal padding so text doesn't touch the edges */
-  width: 100vw;          /* Makes the title take the full viewport width */
-  box-sizing: border-box;
-  max-width: 100%;
 }
 @keyframes fadeInDown {
   from { opacity: 0; transform: translateY(-48px);}
