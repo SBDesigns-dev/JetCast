@@ -1,0 +1,322 @@
+:root {
+  --brand: #0cc0df;
+  --brand-dark: #099aad;
+  --text: #222d37;
+  --bg: #f6fcfe;
+  --header-bg: rgba(255,255,255,0.95);
+  --shadow: 0 4px 32px rgba(12,192,223,0.08);
+}
+html { scroll-behavior: smooth; }
+body {
+  font-family: Arial, 'Inter', sans-serif;
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1.4rem;
+}
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: var(--header-bg);
+  box-shadow: var(--shadow);
+  z-index: 50;
+  transition: background 0.3s;
+}
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 68px;
+}
+.logo-space {
+  width: 60px;
+  min-height: 48px;
+  display: flex;
+  align-items: center;
+}
+.logo {
+  max-height: 48px;
+  max-width: 100%;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2.5rem;
+  margin: 0;
+  padding: 0;
+}
+nav a {
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.08rem;
+  position: relative;
+  padding-bottom: 2px;
+  transition: color 0.2s;
+}
+nav a:after {
+  content: '';
+  display: block;
+  height: 2px;
+  width: 0;
+  background: var(--brand);
+  transition: width 0.2s;
+  position: absolute;
+  left: 0; bottom: -2px;
+}
+nav a:hover,
+nav a:focus {
+  color: var(--brand);
+}
+nav a:hover:after,
+nav a:focus:after {
+  width: 100%;
+}
+.hero {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  min-height: 430px;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 0;
+  overflow: hidden;
+}
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background: url('https://images.unsplash.com/photo-1464037866556-6812c9d1c72e?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
+  filter: blur(18px) brightness(0.70);
+  z-index: 0;
+  transition: transform 1s cubic-bezier(.44,1.35,.33,1), filter 1s;
+  will-change: transform, filter;
+  animation: heroZoom 12s infinite alternate ease-in-out;
+}
+@keyframes heroZoom {
+  0% { transform: scale(1);}
+  100% { transform: scale(1.09);}
+}
+.hero-content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.hero-title {
+  font-size: 2.7rem;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: -1.2px;
+  background: linear-gradient(90deg, #fff 80%, #0cc0df 120%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: fadeInDown 1.1s cubic-bezier(.44,1.35,.33,1);
+  margin: 0;
+  text-shadow: 0 10px 32px #0cc0df33;
+}
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-48px);}
+  to { opacity: 1; transform: translateY(0);}
+}
+.reveal {
+  opacity: 0;
+  transform: translateY(48px);
+  transition: opacity 0.9s cubic-bezier(.44,1.35,.33,1), transform 0.85s cubic-bezier(.44,1.35,.33,1);
+}
+.reveal.visible {
+  opacity: 1;
+  transform: none;
+}
+.about {
+  background: #fff;
+  padding: 90px 0 60px 0;
+  box-shadow: 0 4px 32px #0cc0df08;
+}
+.about h2 {
+  color: var(--brand);
+  font-size: 2rem;
+  margin-bottom: 1.2rem;
+  font-weight: 700;
+}
+.about p {
+  font-size: 1.16rem;
+  max-width: 650px;
+}
+.latest {
+  background: var(--bg);
+  padding: 80px 0 60px 0;
+}
+.latest h2 {
+  color: var(--brand-dark);
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1.2rem;
+}
+.latest-podcast-card {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  background: #fff;
+  box-shadow: 0 4px 32px #0cc0df10;
+  padding: 2rem;
+  border-radius: 20px;
+  transition: box-shadow 0.3s;
+  margin-top: 1.2rem;
+}
+.latest-podcast-card:hover {
+  box-shadow: 0 8px 48px #0cc0df22;
+}
+.podcast-cover {
+  width: 130px;
+  height: 130px;
+  object-fit: cover;
+  border-radius: 14px;
+  box-shadow: 0 2px 12px #0cc0df11;
+  flex-shrink: 0;
+}
+.podcast-info {
+  flex: 1;
+}
+.podcast-info h3 {
+  margin: 0 0 0.6rem 0;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+.podcast-info p {
+  margin: 0 0 1.2rem 0;
+}
+audio {
+  width: 100%;
+  outline: none;
+  border-radius: 6px;
+  margin-top: 0.5rem;
+}
+.platforms {
+  background: #fff;
+  padding: 70px 0 60px 0;
+  text-align: center;
+}
+.platforms h2 {
+  color: var(--brand);
+  font-size: 1.7rem;
+  font-weight: 700;
+  margin-bottom: 2.2rem;
+}
+.platform-icons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2.2rem;
+  margin-top: 0.7rem;
+}
+.platform {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 62px;
+  height: 62px;
+  border-radius: 50%;
+  background: var(--bg);
+  box-shadow: 0 2px 16px #0cc0df11;
+  transition: transform 0.18s, box-shadow 0.18s, background 0.18s;
+  border: 2px solid #fff;
+  position: relative;
+  overflow: hidden;
+}
+.platform img {
+  width: 38px;
+  height: 38px;
+  filter: grayscale(0.1) contrast(1.1) brightness(1.1);
+  transition: filter 0.2s;
+}
+.platform.yt-music:hover { background: #e9002d11; }
+.platform.youtube:hover { background: #ff000011; }
+.platform.spotify:hover { background: #1db95411; }
+.platform.apple:hover { background: #f5f5f511; }
+.platform.google:hover { background: #4285f411; }
+.platform.rss:hover { background: #fa640011; }
+.platform:hover, .platform:focus {
+  transform: translateY(-6px) scale(1.09);
+  box-shadow: 0 6px 28px #0cc0df22;
+  background: var(--brand);
+}
+.platform:hover img, .platform:focus img {
+  filter: none;
+}
+footer {
+  background: var(--brand-dark);
+  color: #fff;
+  padding: 28px 0;
+  font-size: 1.05rem;
+  margin-top: 0;
+}
+.footer-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+@media (max-width: 900px) {
+  .latest-podcast-card {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1.2rem;
+  }
+  .podcast-cover {
+    margin: 0 auto;
+  }
+}
+@media (max-width: 700px) {
+  .container {
+    padding: 0 0.7rem;
+  }
+  .header-inner {
+    flex-direction: column;
+    gap: 0.5rem;
+    min-height: 44px;
+  }
+  nav ul {
+    gap: 1.2rem;
+    font-size: 1rem;
+  }
+  .about, .latest, .platforms {
+    padding: 60px 0 40px 0;
+  }
+  .hero-title {
+    font-size: 1.7rem;
+    padding: 0 1.4rem;
+  }
+  .footer-inner {
+    font-size: 0.97rem;
+  }
+}
+@media (max-width: 500px) {
+  .latest-podcast-card {
+    padding: 1.2rem;
+    border-radius: 12px;
+  }
+  .podcast-cover {
+    width: 100px;
+    height: 100px;
+  }
+  .platform {
+    width: 48px;
+    height: 48px;
+  }
+  .platform img {
+    width: 28px;
+    height: 28px;
+  }
+}
