@@ -1,5 +1,10 @@
-/* 1. Import Telegraf font from Adobe Fonts (replace the URL with your actual kit) */
-@import url('https://use.typekit.net/xxxxxxx.css'); /* <-- Set your real Telegraf kit URL here */
+/* 1. Import Telegraf font from your local assets */
+@font-face {
+  font-family: 'Telegraf';
+  src: url('/assets/fonts/font.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
 
 /* 2. Updated color variables for dark theme */
 :root {
