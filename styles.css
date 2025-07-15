@@ -107,8 +107,8 @@ nav a:focus:after {
 .hero-bg {
   position: absolute;
   inset: 0;
-  background: url('https://images.unsplash.com/photo-1464037866556-6812c9d1c72e?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
-  filter: blur(18px) brightness(0.70);
+  background: url('/assets/images/banner.png') center/cover no-repeat;
+  filter: blur(10px) brightness(0.70);
   z-index: 0;
   transition: transform 1s cubic-bezier(.44,1.35,.33,1), filter 1s;
   will-change: transform, filter;
