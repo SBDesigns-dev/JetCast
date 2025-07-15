@@ -1,14 +1,19 @@
+/* 1. Import Telegraf font from Adobe Fonts (replace the URL with your actual kit) */
+@import url('https://use.typekit.net/xxxxxxx.css'); /* <-- Set your real Telegraf kit URL here */
+
+/* 2. Updated color variables for dark theme */
 :root {
   --brand: #0cc0df;
   --brand-dark: #099aad;
-  --text: #222d37;
-  --bg: #f6fcfe;
-  --header-bg: rgba(255,255,255,0.95);
-  --shadow: 0 4px 32px rgba(12,192,223,0.08);
+  --text: #e6eaf1;
+  --bg: #151a22;
+  --header-bg: rgba(25, 27, 34, 0.97);
+  --shadow: 0 4px 32px rgba(12,192,223,0.07);
 }
+
 html { scroll-behavior: smooth; }
 body {
-  font-family: Arial, 'Inter', sans-serif;
+  font-family: 'Telegraf', Arial, 'Inter', sans-serif;
   margin: 0;
   background: var(--bg);
   color: var(--text);
@@ -21,6 +26,7 @@ body {
   margin: 0 auto;
   padding: 0 1.4rem;
 }
+/* Header */
 header {
   position: fixed;
   top: 0;
@@ -81,6 +87,7 @@ nav a:hover:after,
 nav a:focus:after {
   width: 100%;
 }
+/* Hero Section */
 .hero {
   position: relative;
   display: flex;
@@ -139,8 +146,9 @@ nav a:focus:after {
   opacity: 1;
   transform: none;
 }
+/* About Section */
 .about {
-  background: #fff;
+  background: #222836;
   padding: 90px 0 60px 0;
   box-shadow: 0 4px 32px #0cc0df08;
 }
@@ -154,6 +162,7 @@ nav a:focus:after {
   font-size: 1.16rem;
   max-width: 650px;
 }
+/* Latest Podcast */
 .latest {
   background: var(--bg);
   padding: 80px 0 60px 0;
@@ -168,7 +177,7 @@ nav a:focus:after {
   display: flex;
   gap: 2rem;
   align-items: flex-start;
-  background: #fff;
+  background: #222836;
   box-shadow: 0 4px 32px #0cc0df10;
   padding: 2rem;
   border-radius: 20px;
@@ -203,8 +212,9 @@ audio {
   border-radius: 6px;
   margin-top: 0.5rem;
 }
+/* Platforms Section */
 .platforms {
-  background: #fff;
+  background: #222836;
   padding: 70px 0 60px 0;
   text-align: center;
 }
@@ -231,7 +241,7 @@ audio {
   background: var(--bg);
   box-shadow: 0 2px 16px #0cc0df11;
   transition: transform 0.18s, box-shadow 0.18s, background 0.18s;
-  border: 2px solid #fff;
+  border: 2px solid #222836;
   position: relative;
   overflow: hidden;
 }
@@ -241,12 +251,12 @@ audio {
   filter: grayscale(0.1) contrast(1.1) brightness(1.1);
   transition: filter 0.2s;
 }
-.platform.yt-music:hover { background: #e9002d11; }
-.platform.youtube:hover { background: #ff000011; }
-.platform.spotify:hover { background: #1db95411; }
-.platform.apple:hover { background: #f5f5f511; }
-.platform.google:hover { background: #4285f411; }
-.platform.rss:hover { background: #fa640011; }
+.platform.yt-music:hover { background: #e9002d22; }
+.platform.youtube:hover { background: #ff000022; }
+.platform.spotify:hover { background: #1db95422; }
+.platform.apple:hover { background: #f5f5f522; }
+.platform.google:hover { background: #4285f422; }
+.platform.rss:hover { background: #fa640022; }
 .platform:hover, .platform:focus {
   transform: translateY(-6px) scale(1.09);
   box-shadow: 0 6px 28px #0cc0df22;
@@ -255,9 +265,10 @@ audio {
 .platform:hover img, .platform:focus img {
   filter: none;
 }
+/* Footer */
 footer {
-  background: var(--brand-dark);
-  color: #fff;
+  background: #1d222e;
+  color: #e6eaf1;
   padding: 28px 0;
   font-size: 1.05rem;
   margin-top: 0;
@@ -268,6 +279,8 @@ footer {
   align-items: center;
   gap: 6px;
 }
+
+/* Responsive Tweaks */
 @media (max-width: 900px) {
   .latest-podcast-card {
     flex-direction: column;
