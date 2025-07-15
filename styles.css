@@ -259,9 +259,7 @@ audio {
 .platform.yt-music:hover { background: #e9002d22; }
 .platform.youtube:hover { background: #ff000022; }
 .platform.spotify:hover { background: #1db95422; }
-.platform.apple:hover { background: #f5f5f522; }
-.platform.google:hover { background: #4285f422; }
-.platform.rss:hover { background: #fa640022; }
+.platform.amazon:hover { background: #f5f5f522; }
 .platform:hover, .platform:focus {
   transform: translateY(-6px) scale(1.09);
   box-shadow: 0 6px 28px #0cc0df22;
