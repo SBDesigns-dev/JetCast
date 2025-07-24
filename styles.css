@@ -250,7 +250,7 @@ audio {
   position: relative;
   overflow: hidden;
 }
-.platform img {
+.platform svg {
   width: 38px;
   height: 38px;
   filter: grayscale(0.1) contrast(1.1) brightness(1.1);
