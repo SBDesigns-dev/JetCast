@@ -336,3 +336,17 @@ footer {
     height: 28px;
   }
 }
+
+
+/* Seb N's Secret Memes Section */
+.memes {
+  background: #222836;
+  padding: 90px 0 60px 0;
+  box-shadow: 0 4px 32px #0cc0df08;
+}
+.memes h2 {
+  color: var(--brand);
+  font-size: 2rem;
+  margin-bottom: 1.2rem;
+  font-weight: 700;
+}
