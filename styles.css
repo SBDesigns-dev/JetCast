@@ -267,6 +267,7 @@ audio {
 .platform.pocketcast:hover { background: #f43e3722; }
 .platform.goodpods:hover { background: #fcdb0022; }
 .platform.overcast:hover { background: #fc7e0f22; }
+.platform.whatsapp:hover { background: #21c06322; }
 .platform:hover, .platform:focus {
   transform: translateY(-6px) scale(1.09);
   box-shadow: 0 6px 28px #0cc0df22;
