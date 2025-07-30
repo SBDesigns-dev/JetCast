@@ -7,6 +7,7 @@
   <!-- Telegraf font is not on Google Fonts. Use system fallback or add @font-face in styles.css if hosting Telegraf. -->
   <link rel="stylesheet" href="styles.css">
   <link rel="icon" type="image/png" href="/assets/images/icon.png">
+  <script src="https://open.spotify.com/embed/iframe-api/v1" async></script>
 </head>
 <body>
   <section class="hero">
@@ -14,7 +15,7 @@
     <div class="hero-content">
       <h1 class="hero-title">JetCast</h1>
       </br>
-      <a href="#platforms"><button class="listen-now">Listen Now</button></a>
+      <a href="#latest"><button class="listen-now">Listen Now</button></a>
     </div>
   </section>
   <section id="about" class="about reveal">
@@ -29,61 +30,51 @@
   <section id="latest" class="latest reveal">
     <div class="container">
       <h2>Latest Podcast</h2>
-      <div class="latest-podcast-card">
-        <img src="/assets/images/logo.png" alt="Podcast Cover" class="podcast-cover">
-        <div class="podcast-info">
-          <h3>First Episode Coming Soon...</h3>
-          <p>
-            We will soon release our first episode... We're just working to get all our services up and running!
-          </p>
-        </div>
-      </div>
+      <div class="latest-podcast-card" id="podcast-card"></div>
     </div>
   </section>
   <section id="platforms" class="platforms reveal">
     <div class="container">
       <h2>Listen On</h2>
       <div class="platform-icons">
-        <a href="https://youtube.com/@TalkJetCast" class="platform youtube" target="_blank">
+        <a href="https://www.youtube.com/playlist?list=PLdo7MrTSOIPe4nSv6mzbcOonJmJQSdo5y" class="platform youtube" target="_blank">
           <img src="/assets/images/platforms/yt.svg">
         </a>
-        <a href="https://music.youtube.com/@TalkJetCast" class="platform yt-music" target="_blank">
+        <a href="https://music.youtube.com/playlist?list=PLdo7MrTSOIPdrpkeBTBXe7TJwO1eH-4gV" class="platform yt-music" target="_blank">
           <img src="/assets/images/platforms/ytm.svg">
         </a>
-        <a href="https://spotify.com" class="platform spotify" target="_blank">
+        <a href="https://open.spotify.com/show/61HCFp9EQZ0P2DJXZaacBI" class="platform spotify" target="_blank">
           <img src="/assets/images/platforms/sptfy.svg">
         </a>
-        <a href="https://music.amazon.com" class="platform amazon" target="_blank">
+        <a href="https://music.amazon.com/podcasts/dfae8282-5337-4d13-a985-86e4efb2e30a/jetcast-aviation" class="platform amazon" target="_blank">
           <img src="/assets/images/platforms/amzmus.svg">
         </a>
       </div>
       
       <div class="platform-icons">
-        <a href="https://podcasts.apple.com" class="platform apple" target="_blank">
+        <a href="https://podcasts.apple.com/gb/podcast/jetcast-aviation/id1829793262?app=music&at=11l65W&ct=push" class="platform apple" target="_blank">
           <img src="/assets/images/platforms/applpod.svg">
         </a>
-        <a href="https://overcast.fm" class="platform overcast" target="_blank">
+        <a href="https://overcast.fm/itunes1829793262" class="platform overcast" target="_blank">
           <img src="/assets/images/platforms/overcast.svg">
         </a>
-        <a href="https://pandora.com" class="platform pandora" target="_blank">
+        <a href="https://www.pandora.com/podcast/jetcast-aviation/PC:1001107425" class="platform pandora" target="_blank">
           <img src="/assets/images/platforms/pand.svg">
         </a>
-        <a href="https://tunein.com" class="platform tunein" target="_blank">
+        <a href="https://tunein.com/podcasts/JetCast-Aviation-p4660223" class="platform tunein" target="_blank">
           <img src="/assets/images/platforms/tunein.svg">
         </a>
-        <a href="https://castbox.fm" class="platform castbox" target="_blank">
+        <a href="https://castbox.fm/ch/6694594" class="platform castbox" target="_blank">
           <img src="/assets/images/platforms/castbox.svg">
         </a>
-        <a href="https://pca.st" class="platform pocketcast" target="_blank">
+        <a href="https://pca.st/9dvinbek" class="platform pocketcast" target="_blank">
           <img src="/assets/images/platforms/pcast.svg">
         </a>
-        <a href="https://goodpods.com" class="platform goodpods" target="_blank">
+        <a href="https://goodpods.com/podcasts/jetcast-aviation-702643" class="platform goodpods" target="_blank">
           <img src="/assets/images/platforms/goodpods.svg">
         </a>
-        <a href="https://whatsapp.com/channel/0029VbAneCSAO7RJVxviAu2B" class="platform whatsapp" target="_blank">
-          <img src="/assets/images/platforms/wa.svg">
-        </a>
       </div>
+      <h3>Or Just Search for "JetCast Aviation" on Your Favourite App.</h3>
     </div>
   </section>
   <section id="memes" class="memes reveal">
@@ -121,5 +112,15 @@
     </div>
   </footer>
   <script src="script.js"></script>
+  <script>
+    window.onSpotifyIframeApiReady = (IFrameAPI) => {
+      const element = document.getElementById('podcast-card');
+      const options = {
+          uri: 'spotify:episode:6SCJlATTBOVjVneLeQEtdm'
+        };
+      const callback = (EmbedController) => {};
+      IFrameAPI.createController(element, options, callback);
+    };
+</script>
 </body>
 </html>

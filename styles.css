@@ -188,6 +188,7 @@ nav a:focus:after {
   border-radius: 20px;
   transition: box-shadow 0.3s;
   margin-top: 1.2rem;
+  max-height: 200px;
 }
 .latest-podcast-card:hover {
   box-shadow: 0 8px 48px #0cc0df22;
